@@ -1,0 +1,330 @@
+/* --- Base Structure for Professional Site Look --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4F6F9; /* Light gray background for professional look */
+    color: #333;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- 1. Sidebar Navigation (Fixed) --- */
+.sidebar {
+    width: 250px;
+    background-color: #1A1A1A; /* Dark sidebar for contrast */
+    color: #FFFFFF;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-header {
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #4CAF50; 
+    letter-spacing: 2px;
+    text-shadow: none;
+}
+
+.sidebar-header h2 {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #999;
+    margin: 5px 0 0 0;
+}
+
+.main-nav {
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:hover {
+    background-color: #2A2A2A;
+}
+
+.nav-item.active {
+    background-color: #4CAF50;
+    color: #1A1A1A;
+    font-weight: 700;
+    border-left: 5px solid #00FFFF;
+}
+
+.nav-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.system-online {
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+/* --- 2. Main Application Content Area --- */
+.app-content {
+    margin-left: 250px; /* Offset for the fixed sidebar */
+    width: calc(100% - 250px);
+}
+
+.app-header {
+    background-color: #FFFFFF;
+    padding: 20px 40px;
+    border-bottom: 1px solid #EEE;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.app-header h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    padding: 40px;
+    max-width: 100%;
+}
+
+/* --- Component Styling (Cleaned up from Cyberpunk) --- */
+h3 {
+    color: #333;
+    border-left: 5px solid #2196F3;
+    padding-left: 12px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.input-area {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-area label {
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 500;
+}
+
+#molecule-query {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #CCC;
+    background-color: #F9F9F9;
+    color: #333;
+    font-size: 1em;
+}
+
+.run-control-panel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#run-button {
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-grow: 1;
+}
+
+#run-button:hover {
+    background-color: #43A047;
+}
+
+#run-button:disabled {
+    background-color: #B0B0B0;
+    cursor: not-allowed;
+    color: #666;
+}
+
+/* ROI Counter - Now a clean badge */
+#roi-counter {
+    background-color: #2196F3;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: white;
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.4);
+    flex-shrink: 0;
+}
+
+/* Agent Cards & Statuses */
+#agent-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.agent-card {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #EEE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.agent-card h4 {
+    color: #555;
+}
+
+.progress-bar {
+    background-color: #2196F3;
+    box-shadow: none;
+}
+.agent-card.running {
+    border-color: #FFC107;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+}
+
+.master-agent-box {
+    background-color: #EFEFEF;
+    border: 1px solid #CCC;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.master-agent-box span.status-icon {
+    color: #2196F3;
+}
+
+/* Reasoning Panel (Audit Log) */
+.reasoning-panel {
+    background-color: #F9F9F9;
+    border: 1px solid #EEE;
+}
+
+.reasoning-panel h4 {
+    color: #2196F3;
+    text-shadow: none;
+}
+
+.log-master { color: #2196F3; font-weight: 700; } 
+.log-alert { color: #F44336; font-weight: 900; animation: none; } /* Removed animations for cleaner look */
+.log-replan { color: #FFC107; font-weight: 700; } 
+.log-data { color: #555; }
+
+/* Constraint Scorecard */
+.constraint-scorecard {
+    background-color: #FFFFFF;
+    border: 1px solid #EEE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.constraint-status {
+    text-shadow: none;
+}
+
+.status-fulfilled {
+    color: #4CAF50;
+    box-shadow: none;
+}
+
+.status-mitigated {
+    color: #2196F3;
+    box-shadow: none;
+}
+
+/* --- New: PDF Export Control --- */
+.pdf-export-control {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#pdf-button {
+    padding: 10px 18px;
+    background-color: #F44336; /* Use a strong color like Red for PDF/Download */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+#pdf-button:hover {
+    background-color: #D32F2F;
+    transform: translateY(-1px);
+}
+
+#pdf-button .nav-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+/* Final Report Output */
+.report-card {
+    background-color: #FFFFFF;
+    border-left: 5px solid #4CAF50;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+#report-status {
+    color: #4CAF50;
+    text-shadow: none;
+}
+
+.highlight {
+    color: #2196F3;
+}
+
+.recommendation {
+    background-color: #F9F9F9;
+    border-left: 5px solid #FFC107;
+    box-shadow: none;
+}
+
+.metrics-panel {
+    background-color: #F9F9F9;
+    border: 1px solid #EEE;
+    box-shadow: none;
+}
+
+.metrics-panel h4 {
+    color: #2196F3;
+}

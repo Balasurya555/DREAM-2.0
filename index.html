@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM 2.0 | Generative Strategy Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">DREAM <span class="sub-text">2.0</span></h1>
+            <h2>Autonomous Strategy</h2>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="nav-item active">
+                <span class="nav-icon">🔬</span> Discovery Engine
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📊</span> Historical Runs
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">⚙️</span> Settings & Tools
+            </div>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <p>System Status: <span class="system-online">ONLINE</span></p>
+        </div>
+    </aside>
+
+    <div class="app-content">
+        <header class="app-header">
+            <h1>Discovery Engine: **Molecule Repurposing Synthesis**</h1>
+        </header>
+        
+        <div class="container">
+            
+            <section class="input-area">
+                <label for="molecule-query">Strategic Molecule Query (Autonomous R&D Goal)</label>
+                <input type="text" id="molecule-query" value="Molecule X for oncology, minimizing patent risk, maximizing market entry speed." readonly>
+                
+                <div class="run-control-panel">
+                    <button id="run-button" onclick="startDREAM()">🚀 Initiate Generative Synthesis (2 Months → Seconds)</button>
+                    <div id="roi-counter">TIME SAVED: 0.0 Days Potential</div>
+                </div>
+            </section>
+
+            <section class="workflow-area" id="workflow-area">
+                <h3>1. Autonomous Orchestration & Parallel Discovery</h3>
+                <div id="agent-container">
+                    </div>
+                
+                <div id="master-agent-status" class="status-box master-agent-box">
+                    <span class="status-icon">🧠</span>
+                    **Master Agent (CSO) Status:** Awaiting Instruction...
+                </div>
+
+                <div id="reasoning-panel" class="reasoning-panel" style="display: none;">
+                    <h4>2. Real-time Strategic Reasoning Chain (LLM Audit Log)</h4>
+                    <div id="reasoning-log" class="log-output">
+                        </div>
+                </div>
+            </section>
+
+            <section class="output-area" id="output-area" style="display: none;">
+                
+                <div class="pdf-export-control">
+                    <button id="pdf-button" onclick="exportReportToPDF()">
+                        <span class="nav-icon">📥</span> Export Final Report as PDF
+                    </button>
+                </div>
+                
+                <div id="pdf-target">
+                    
+                    <h3>3. Constraint Fulfillment Scorecard</h3>
+                    <div id="constraint-scorecard" class="constraint-scorecard">
+                        </div>
+                    
+                    <h3>4. Innovative Product Story (Final Strategic Output)</h3>
+                    <div class="output-content-grid">
+                        <div id="final-report-card" class="report-card">
+                            <h4 id="report-status">Report Generating...</h4>
+                            <div id="report-content">
+                                </div>
+                        </div>
+
+                        <div class="metrics-panel">
+                            <h4>Validation Metrics & Confidence</h4>
+                            <div id="confidence-chart" class="chart-container">
+                                </div>
+                            <p style="font-size:0.8em; color:#888; margin-top:20px;">*Confidence scores validate data source quality and cross-agent consensus.</p>
+                        </div>
+                    </div>
+                </div> </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
